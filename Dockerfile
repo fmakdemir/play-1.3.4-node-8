@@ -13,7 +13,7 @@ WORKDIR ${INSTALL_DIR}
 # add node repo & install curl, zip, node/npm, apt https & apt utils
 RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - \
 #    && apt-get -y update \ # no need for update since above script does it
-    && apt-get -y install zip nodejs \
+    && apt-get -y install zip nodejs mysql-client \
     && apt-get -y autoclean
 # install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
